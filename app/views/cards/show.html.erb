@@ -1,0 +1,14 @@
+<p>Hi i'm a card</p>
+
+
+<%= @card.question %>
+
+<%= form_tag(guesses_path) do %>
+  <%= hidden_field_tag(:card_id, @card.id) %>
+  <%= label_tag(:user_answer) %>
+  <%= text_field_tag(:answer) %>
+
+
+  <%= submit_tag("Submit") %>
+
+<% end %>

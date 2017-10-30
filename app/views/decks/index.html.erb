@@ -1,1 +1,5 @@
 <p> Deck List </p>
+
+<% @decks.each do |deck| %>
+  <%= link_to deck.name, deck %>
+<% end %>
