@@ -1,4 +1,12 @@
 <table>
-  <tr><th> <%= @deck.name %> </th></tr>
-  <tr><td> <%= @round.first_try_count %> </td></tr>
+  <tr>
+    <th>Deck Name</th>
+    <th>Correct on first try</th>
+    <th>Total guesses</th>
+  </tr>
+  <tr>
+    <td> <%= @deck.name %> </td>
+    <td> <%= @round.first_try_count %> </td>
+    <td> <%= @round.count_total_guesses %> </td>
+  </tr>
 </table>

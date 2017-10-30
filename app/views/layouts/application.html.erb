@@ -10,6 +10,14 @@
 
   <body>
 
+    <% if !current_user %>
+      <button class="button"> <%= link_to 'Log in', login_path %> </button>
+      <button class="button"> <%= link_to 'Register', new_user_path %> </button>
+    <% else %>
+      <%= current_user.name %>
+      <button class="button"> <%= link_to 'Logout', logout_path %> </button>
+    <% end %>
+
     <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert") %>
     <% end %>
