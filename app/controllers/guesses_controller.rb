@@ -1,4 +1,5 @@
 class GuessesController < ApplicationController
+  before_action :authorize
 
   def create
     @guess = Guess.find_or_create_by(card_id: params[:card_id], round_id: current_round.id)

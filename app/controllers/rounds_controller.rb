@@ -1,6 +1,7 @@
 class RoundsController < ApplicationController
+  before_action :authorize
+
   def show
-    authorize
     @round = Round.find(params[:id])
     @deck = Deck.find(@round.deck_id)
     render 'show'
