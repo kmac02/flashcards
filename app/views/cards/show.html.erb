@@ -1,5 +1,8 @@
 <p>Hi i'm a card</p>
-
+<% if @card_answer %>
+  <p>The correct answer was <%= @card_answer %></p>
+  <p>You entered <%= @user_answer %></p>
+<% end %>
 
 <%= @card.question %>
 

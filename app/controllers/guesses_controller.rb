@@ -8,7 +8,7 @@ class GuessesController < ApplicationController
     if answer_check(card, params[:answer])
       card.update_attributes(solved: true)
     end
-    redirect_to deck_cards_path(deck)
+    redirect_to deck_cards_path(deck, card_answer: card.answer, user_answer: params[:answer])
   end
 
 end

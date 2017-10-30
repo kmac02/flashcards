@@ -1,0 +1,19 @@
+<h2> Welcome home, <%= @user.name %> </h2>
+
+<% @user.rounds.each do |round| %>
+<h3>  <%= round.deck.name %> </h3>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Cards in deck</th>
+    <th>First Guess Correct</th>
+    <th>Total Guesses</th>
+  </tr>
+  <tr>
+    <td> <%= round.updated_at %> </td>
+    <td> <%= round.cards.length %> </td>
+    <td> <%= round.first_try_count %> </td>
+    <td> <%= round.count_total_guesses %> </td>
+  </tr>
+</table>
+<% end %>
