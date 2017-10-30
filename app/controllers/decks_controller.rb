@@ -5,6 +5,7 @@ class DecksController < ApplicationController
   end
 
   def show
+    authorize
     start_round
     @deck = Deck.find(params[:id])
     @deck.reset_cards
